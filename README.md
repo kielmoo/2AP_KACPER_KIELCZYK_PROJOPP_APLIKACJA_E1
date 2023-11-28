@@ -20,5 +20,8 @@ https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/commit/f7
 3) Tutaj również użyłem metodę KISS, lecz w innym miejscu w kodzie, oraz kod będzie teraz bardziej zrozumiały. 
 https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/commit/199401b1d0e4cf17ca81863ecec66863efa9561b
 
-4) Dodajemy tutaj dodatkowe biblioteki 
+4) Dodałem tutaj dodatkowe biblioteki, ponieważ mam zamiar w przyszłości dodać funkcje, która będzie rysować grafikę po podaniu wyniku. 
 https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/commit/786ac088c593e82d0746887b0c0f9d41a5c075bb
+
+5) Dodanie tablicy 
+https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/commit/d498cd9a032e577ac8eb5498e65b06602aefdd2a?diff=split
