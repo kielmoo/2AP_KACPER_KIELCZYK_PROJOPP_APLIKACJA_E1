@@ -38,12 +38,11 @@ def oblicz_wynik(tekst):
         return "Błąd"
 
 def oblicz(pole_na_dane, ekran, info):
-    def f():
-        tekst = pole_na_dane.get()
-        wynik = oblicz_wynik(tekst)
-        ekran[-1]["text"] = tekst
-        info["text"] = wynik
-    return f
+    tekst = pole_na_dane.get()
+    wynik = oblicz_wynik(tekst)
+    ekran[-1]["text"] = tekst
+    info["text"] = wynik
+    
 
 def przycsikKlik(pole_na_dane, symbol):
     
