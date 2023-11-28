@@ -1,5 +1,6 @@
 import tkinter as tk
-
+import math as math
+import turtle as tr
 symbole = ["7", "8", "9","C", "4", "5", "6", "1", "2", "3", "-", "0", ",", "+"]
 COLOR = "#f2f4f
 
