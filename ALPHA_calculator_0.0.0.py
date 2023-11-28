@@ -45,16 +45,15 @@ def oblicz(pole_na_dane, ekran, info):
     return f
 
 def przycsikKlik(pole_na_dane, symbol):
-    def f():
-        if symbol == "C":
-            pole_na_dane.delete(0, tk.END)
-        elif symbol == "←":
-            bufor = pole_na_dane.get()[:-1]
-            pole_na_dane.delete(0, tk.END)
-            pole_na_dane.insert(0, bufor)
-        else:
-            pole_na_dane.insert(tk.END, symbol)
-    return f
+    
+    if symbol == "C":
+        pole_na_dane.delete(0, tk.END)
+    elif symbol == "←":
+        bufor = pole_na_dane.get()[:-1]
+        pole_na_dane.delete(0, tk.END)
+        pole_na_dane.insert(0, bufor)
+    else:
+        pole_na_dane.insert(tk.END, symbol)
 
 def inicjalizacjaPrzyciskow(root, ekran, info):
     przyciski = [
