@@ -25,3 +25,7 @@ https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/commit/78
 
 5) Dodanie tablicy 
 https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/commit/d498cd9a032e577ac8eb5498e65b06602aefdd2a?diff=split
+
+Dokumentacja z dnia 30.01.2024r
+
+Zostały poprawione, drobne błędy, co mogło powodować złym działaniem programu. 
