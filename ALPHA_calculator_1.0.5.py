@@ -1,7 +1,7 @@
 import tkinter as tk
-symbole = ["7", "8", "9","C", "4", "5", "6", "1", "2", "3", "-", "0", ",", "+"]
-COLOR = "#f2f4f
 
+symbole = ["7", "8", "9", "C", "4", "5", "6", "1", "2", "3", "-", "0", ",", "+"]
+COLOR = "#808080"
 
 
 def inicjalizacjaOkienka():
@@ -11,14 +11,16 @@ def inicjalizacjaOkienka():
     root.title("Kalkulator")
     return root
 
+
 def inicjalizacjaEkranu(root):
     ekran = [
         tk.Label(root, bg="#C0CBCB", width=55, anchor="w", borderwidth=2)
-        for i in range(3)
+        for _ in range(3)
     ]
     for i in range(len(ekran)):
         ekran[i].grid(row=i, columnspan=6, ipady=15, ipadx=1)
     return ekran
+
 
 def inicjalizacjaPolaNaDane(root, ekran):
     pole_na_dane = tk.Entry(
@@ -30,22 +32,25 @@ def inicjalizacjaPolaNaDane(root, ekran):
     info.grid(row=len(ekran) + 1, columnspan=6, ipady=15, ipadx=1)
     return pole_na_dane, info
 
+
 def oblicz_wynik(tekst):
     try:
         wynik = str(eval(tekst))
         return wynik
-    except:
-        return "Błąd"
+    except ZeroDivisionError:
+        return "Nie można dzielić przez zero"
+    except Exception as e:
+        return f"Błąd: {e}"
+
 
 def oblicz(pole_na_dane, ekran, info):
     tekst = pole_na_dane.get()
     wynik = oblicz_wynik(tekst)
     ekran[-1]["text"] = tekst
     info["text"] = wynik
-    
 
-def przycsikKlik(pole_na_dane, symbol):
-    
+
+def przyciskKlik(pole_na_dane, symbol):
     if symbol == "C":
         pole_na_dane.delete(0, tk.END)
     elif symbol == "←":
@@ -55,32 +60,34 @@ def przycsikKlik(pole_na_dane, symbol):
     else:
         pole_na_dane.insert(tk.END, symbol)
 
-def inicjalizacjaPrzyciskow(root, ekran, info):
+
+def inicjalizacjaPrzyciskow(root, ekran, pole_na_dane, info):
     przyciski = [
-        tk.Button(root, text=symbol, bg=COLOR, borderwidth=0) for symbol in symbole
+        tk.Button(root, text=symbol, bg=COLOR, borderwidth=0, command=lambda s=symbol: przyciskKlik(pole_na_dane, s))
+        for symbol in symbole
     ]
     j = len(ekran) + 2
     for i in range(len(przyciski)):
         if i % 6 == 0:
             j += 1
-        margin = 21 if len(symbole[i]) == 1 else 10
+        margin = 20 if len(symbole[i]) == 1 else 10
         przyciski[i].grid(row=j, column=i % 6, ipady=5, ipadx=margin)
-        przyciski[i].configure(command=przycsikKlik(pole_na_dane, przyciski[i]["text"]))
 
     znak_rownosc = tk.Button(
         root,
         text="=",
         bg="#00BFFF",
         borderwidth=0,
-        command=oblicz(pole_na_dane, ekran, info),
+        command=lambda: oblicz(pole_na_dane, ekran, info),
     )
     znak_rownosc.grid(row=len(ekran) + 6, column=4, columnspan=2, ipady=5, ipadx=50)
 
     return przyciski
 
+
 if __name__ == "__main__":
     root = inicjalizacjaOkienka()
     ekran = inicjalizacjaEkranu(root)
     pole_na_dane, info = inicjalizacjaPolaNaDane(root, ekran)
-    przyciski = inicjalizacjaPrzyciskow(root, ekran, info)
+    przyciski = inicjalizacjaPrzyciskow(root, ekran, pole_na_dane, info)
     root.mainloop()
