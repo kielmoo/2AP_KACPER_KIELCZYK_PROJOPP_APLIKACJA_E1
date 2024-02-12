@@ -29,3 +29,6 @@ https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/commit/d4
    Dokumentacja z dnia 30.01.2024r
 
 Zostały poprawione, drobne błędy, co mogło powodować złym działaniem programu. 
+
+   Dokumentacja z dnia 12.02.2024r
+   Został zmieniony kolor paska w kalkulatorze
