@@ -1,20 +1,20 @@
 import tkinter as tk
 
-symbole = ["7", "8", "9", "C", "4", "5", "6", "1", "2", "3", "-", "0", ",", "+"]
-COLOR = "#808080"
+symbole = ["7", "8", "9", "C", "4", "5", "6", "1", "2", "3", "-", "0", ".", "+"]
+COLOR = "white"
 
 
-def inicjalizacjaOkienka():
+def window():
     root = tk.Tk()
     root.configure(bg=COLOR)
-    root.geometry("470x430")
+    root.geometry("410x410")
     root.title("Kalkulator")
     return root
 
 
-def inicjalizacjaEkranu(root):
+def screen(root):
     ekran = [
-        tk.Label(root, bg="#C0CBCB", width=55, anchor="w", borderwidth=2)
+        tk.Label(root, bg="#C0CBCB", width=66, anchor="w", borderwidth=2)
         for _ in range(3)
     ]
     for i in range(len(ekran)):
@@ -22,18 +22,18 @@ def inicjalizacjaEkranu(root):
     return ekran
 
 
-def inicjalizacjaPolaNaDane(root, ekran):
+def initialize_data(root, ekran):
     pole_na_dane = tk.Entry(
-        root, borderwidth=0, highlightcolor="white", highlightbackground="white"
+        root, borderwidth=0, highlightcolor="gray", highlightbackground="gray"
     )
     pole_na_dane.grid(row=len(ekran), columnspan=6, ipadx=142, ipady=10)
 
-    info = tk.Label(root, bg="white", width=55, anchor="w", borderwidth=2)
+    info = tk.Label(root, bg="gray", width=66, anchor="w", borderwidth=2)
     info.grid(row=len(ekran) + 1, columnspan=6, ipady=15, ipadx=1)
     return pole_na_dane, info
 
 
-def oblicz_wynik(tekst):
+def calculate_result(tekst):
     try:
         wynik = str(eval(tekst))
         return wynik
@@ -43,14 +43,14 @@ def oblicz_wynik(tekst):
         return f"Błąd: {e}"
 
 
-def oblicz(pole_na_dane, ekran, info):
+def calculate(pole_na_dane, ekran, info):
     tekst = pole_na_dane.get()
-    wynik = oblicz_wynik(tekst)
+    wynik = calculate_result(tekst)
     ekran[-1]["text"] = tekst
     info["text"] = wynik
 
 
-def przyciskKlik(pole_na_dane, symbol):
+def button_click(pole_na_dane, symbol):
     if symbol == "C":
         pole_na_dane.delete(0, tk.END)
     elif symbol == "←":
@@ -61,9 +61,9 @@ def przyciskKlik(pole_na_dane, symbol):
         pole_na_dane.insert(tk.END, symbol)
 
 
-def inicjalizacjaPrzyciskow(root, ekran, pole_na_dane, info):
+def initialize_button(root, ekran, pole_na_dane, info):
     przyciski = [
-        tk.Button(root, text=symbol, bg=COLOR, borderwidth=0, command=lambda s=symbol: przyciskKlik(pole_na_dane, s))
+        tk.Button(root, text=symbol, bg=COLOR, borderwidth=0, command=lambda s=symbol: button_click(pole_na_dane, s))
         for symbol in symbole
     ]
     j = len(ekran) + 2
@@ -78,7 +78,7 @@ def inicjalizacjaPrzyciskow(root, ekran, pole_na_dane, info):
         text="=",
         bg="#00BFFF",
         borderwidth=0,
-        command=lambda: oblicz(pole_na_dane, ekran, info),
+        command=lambda: calculate(pole_na_dane, ekran, info),
     )
     znak_rownosc.grid(row=len(ekran) + 6, column=4, columnspan=2, ipady=5, ipadx=50)
 
@@ -86,8 +86,8 @@ def inicjalizacjaPrzyciskow(root, ekran, pole_na_dane, info):
 
 
 if __name__ == "__main__":
-    root = inicjalizacjaOkienka()
-    ekran = inicjalizacjaEkranu(root)
-    pole_na_dane, info = inicjalizacjaPolaNaDane(root, ekran)
-    przyciski = inicjalizacjaPrzyciskow(root, ekran, pole_na_dane, info)
+    root = window()
+    ekran = screen(root)
+    pole_na_dane, info = initialize_data(root, ekran)
+    przyciski = initialize_button(root, ekran, pole_na_dane, info)
     root.mainloop()
