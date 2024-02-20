@@ -27,8 +27,11 @@ https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/commit/78
 https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/commit/d498cd9a032e577ac8eb5498e65b06602aefdd2a?diff=split
 
    Dokumentacja z dnia 30.01.2024r
-
-Zostały poprawione, drobne błędy, co mogło powodować złym działaniem programu. 
+   Zostały poprawione, drobne błędy, co mogło powodować złym działaniem programu. 
 
    Dokumentacja z dnia 12.02.2024r
    Został zmieniony kolor paska w kalkulatorze
+
+   Dokumentacja z dnia 20.02.2024r
+   Został wykonany przeze mnie test manualny w którym sprawdzałem działalność mojej aplikacji. Moduł dodawania i odejmowania działa bez błędów jak również wynik pojawia się prawidłowy.
+   
