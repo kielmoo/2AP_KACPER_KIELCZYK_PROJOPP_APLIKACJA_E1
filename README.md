@@ -35,3 +35,5 @@ https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/commit/d4
    Dokumentacja z dnia 20.02.2024r
    Został wykonany przeze mnie test manualny w którym sprawdzałem działalność mojej aplikacji. Moduł dodawania i odejmowania działa bez błędów jak również wynik pojawia się prawidłowy.
    
+   Dokumentacja z dnia 11.03.2024r
+   Zostały zmienione położenia cyfr w kalkulatorze oraz operatorów matematycznych.
