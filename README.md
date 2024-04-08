@@ -37,3 +37,6 @@ https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/commit/d4
    
    Dokumentacja z dnia 11.03.2024r
    Zostały zmienione położenia cyfr w kalkulatorze oraz operatorów matematycznych.
+
+   Dokumentacja z dnia 08.04.2024r
+   Kod został błędnie zooptymalizowany poprawiono błąd po optymalizacji kodu.
