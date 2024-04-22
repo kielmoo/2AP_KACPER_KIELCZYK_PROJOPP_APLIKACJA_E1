@@ -40,3 +40,6 @@ https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/commit/d4
 
    Dokumentacja z dnia 08.04.2024r
    Kod został błędnie zooptymalizowany poprawiono błąd po optymalizacji kodu.
+
+   Dokomentacja z dnia 22.04.2024r
+   Aplikacja została zmieniona pod kątem położenie operatorów matematycznych jak i kolorystycznym. Projekt nie jest już w żadnej fazie testowej tylko w wersji 1.0
