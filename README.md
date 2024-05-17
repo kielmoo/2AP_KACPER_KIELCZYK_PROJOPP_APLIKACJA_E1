@@ -1,5 +1,5 @@
-Aby pobrać program i móc z niego korzystać zalecam pobrać program niż kopiować kod i wklejać od jakiegoś środowiska. 
-
+APP 1.0.0 Aby korzystać z programu zalecam pobranie pliku z tego o to linku 
+https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/blob/main/kalk.exe
 
 
 1) Do czego służy aplikacja?
