@@ -1,3 +1,7 @@
+Aby pobrać program i móc z niego korzystać zalecam pobrać program niż kopiować kod i wklejać od jakiegoś środowiska. 
+
+
+
 1) Do czego służy aplikacja?
 
 Aplikacja kalkulator służy do wykonywania działań matematycznych za pomocą różnych operatorów matematycznych.
