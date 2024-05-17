@@ -1,4 +1,4 @@
-APP 1.0.0 Aby korzystać z programu zalecam pobranie pliku z tego o to linku 
+APP 1.0.0 Aby korzystać z programu zalecam pobranie pliku z tego o to linku. Program działa tylko na urządzenia z systemem operacyjnym Windows.
 https://github.com/kielmoo/2AP_KACPER_KIELCZYK_PROJOPP_APLIKACJA_E1-E2/blob/main/kalk.exe
 
 
